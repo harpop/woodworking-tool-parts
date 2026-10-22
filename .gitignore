@@ -1,0 +1,10 @@
+# Never publish catalogs or drawings
+*.pdf
+*.dwg
+*.dxf
+*.bak
+
+# Windows / OneDrive
+desktop.ini
+Thumbs.db
+~$*

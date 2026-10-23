@@ -1,6 +1,6 @@
 ---
 name: woodworking-tool-parts
-description: Knowledge of the components used to design woodworking cutting tools (κοπτικά εργαλεία ξύλου) — tool bodies, brazed carbide/PCD tips, screwed-on reversible knives (ξυράφια), edge forming knives (γωνιοσπάσεις) and grooving knives (γκινισιές) with their TIGRA and STARK catalog codes and dimensions — and how to draw them in CADCraft (live or headless). Use whenever the user mentions a knife/ξυράφι, γωνιοσπάση or γκινισιά code (e.g. 012011, 032295, 013293, 600701), asks which knife fits a tool, asks which parts you know, or asks to design or draw a cutter head, shank tool (κονδύλι) or bore tool.
+description: Knowledge of the components used to design woodworking cutting tools (κοπτικά εργαλεία ξύλου) — tool bodies, brazed carbide/PCD tips, screwed-on reversible knives (ξυράφια), edge forming knives (γωνιοσπάσεις), grooving knives (γκινισιές), square knives (τετράγωνα ξυράφια) and spurs (προχαράξεις) with their TIGRA and STARK catalog codes and dimensions — and how to draw them in CADCraft (live or headless). Use whenever the user mentions a knife/ξυράφι, γωνιοσπάση, γκινισιά or προχάραξη/spur code (e.g. 012011, 032295, 013293, 600701, 013260), asks which knife fits a tool, asks which parts you know, or asks to design or draw a cutter head, shank tool (κονδύλι) or bore tool.
 ---
 
 # Woodworking tool parts (Εξαρτήματα κοπτικών εργαλείων)
@@ -26,6 +26,8 @@ We manufacture woodworking cutting tools.
     - **Custom knives (custom ξυράφια)**, catalog name "Blanks for profiling" (TIGRA cat. pp. 44–51): blanks that we grind to the required profile on profile-grinding machines (e.g. WALDER), so the knife cuts that profile into the wood. The required profile decides which blank is used. See `references/knives-custom-blanks.md`.
 - **Edge forming knives (γωνιοσπάσεις)**, catalog name "Edge rounding knives" (TIGRA cat. p. 36): small screwed carbide inserts with a ready-made 45° chamfer or radius R profile, used to break or round the edge of the workpiece. See `references/edge-forming-knives.md`.
 - **Grooving knives (γκινισιές)**, TIGRA cat. p. 31 "Spurs, grooving knives" and STARK cat. p. 225 "Grooving inserts": screwed carbide inserts that cut a groove (αυλάκι) in the wood, e.g. the groove for the sealing rubber in a window frame. The width of the cutting edge is the groove width. See `references/grooving-knives.md`.
+- **Square knives (τετράγωνα ξυράφια)**, TIGRA cat. pp. 28–29: four-edged (τετράκοπα) square inserts. Those with a countersink (φρέζα) in the hole are also used as spurs.
+- **Spurs (προχαράξεις)**, TIGRA cat. p. 31: inserts that cut only the horizontal planes (perpendicular to the tool axis), scoring the fibres ahead of the main knives. A spur is positioned by **one cutting point**. The **default spur is 013260(14x14x2-30°)**. See `references/square-knives-and-spurs.md` for both groups.
 - **Mounting type:**
   - **Shank tool (κονδύλι):** the tool has a shank.
   - **Bore tool (για άξονα με τρύπα / bore):** the tool has a bore and mounts on an arbor.
@@ -40,7 +42,9 @@ Drop trailing zeros (25.0 → 25, 2.0 → 2) and keep real decimals (20.4 → 20
 
 Edge forming knives (γωνιοσπάσεις) follow the same rule with the type added after T: `032295(16x22x5-R2)` · `032292(16x22x5-45°)`.
 
-Grooving knives (γκινισιές): TIGRA codes follow the knife rule, `013293(18x18x1.95)`. STARK codes **keep STARK's own dimension order**, as printed in its catalog, with the hand after a dash: `600701(48x3x16-DX)` · `600728(30x14x10.5-SX)`.
+Grooving knives (γκινισιές): TIGRA codes follow the knife rule, `013293(18x18x1.95)`. Square knives and spurs follow the edge forming rule, with the clearance angle: `013260(14x14x2-30°)`. The countersunk 106682 adds `-CS`: `106682(10.5x10.5x1.5-35°-CS)`.
+
+STARK codes **keep STARK's own dimension order**, as printed in its catalog, with the hand after a dash: `600701(48x3x16-DX)` · `600728(30x14x10.5-SX)`.
 
 ## Reference files
 
@@ -51,6 +55,7 @@ Grooving knives (γκινισιές): TIGRA codes follow the knife rule, `013293
 | How to draw a knife (views, layers, dimensions) in CADCraft | `references/drawing-knives.md` |
 | Edge forming knives (Γωνιοσπάσεις), TIGRA cat. p.36: range, geometry and drawing | `references/edge-forming-knives.md` |
 | Grooving knives (Γκινισιές), TIGRA cat. p.31 and STARK cat. p.225: range, geometry and drawing | `references/grooving-knives.md` |
+| Square knives and spurs (Τετράγωνα ξυράφια και Προχαράξεις), TIGRA cat. pp.28–31: range, cutting point, geometry and drawing | `references/square-knives-and-spurs.md` |
 
 More categories will be added one at a time.
 
@@ -65,6 +70,8 @@ When the user asks which parts or components you know (π.χ. «ποια εξα�
 | Edge forming knives | Γωνιοσπάσεις | TIGRA 36 | T10MG | 7 | `edge-forming-knives.md` |
 | Grooving knives | Γκινισιές | TIGRA 31 | T07MF-CR | 9 | `grooving-knives.md` |
 | Grooving knives | Γκινισιές | STARK 225 | – | 12 | `grooving-knives.md` |
+| Square knives | Τετράγωνα ξυράφια | TIGRA 28–29 | T04F-CR, T04MG-CR, T07MF-CR | 5 | `square-knives-and-spurs.md` |
+| Spurs | Προχαράξεις | TIGRA 31 (+ 3 square knives) | T07MF-CR | 4 (+3) | `square-knives-and-spurs.md` |
 
 ## Supplier catalogs
 
@@ -81,6 +88,8 @@ Use grade **T04F-CR** for both standard and custom knives. It is the only column
 Edge forming knives (γωνιοσπάσεις) are listed only in grade **T10MG**.
 
 TIGRA grooving knives (γκινισιές) are in grade **T07MF-CR**. The STARK catalog gives no grade, and none is recorded.
+
+Square knives and spurs: the grade differs per code (T04F-CR, T04MG-CR or T07MF-CR). It is listed per code in `references/square-knives-and-spurs.md`.
 
 ## Drawing
 
